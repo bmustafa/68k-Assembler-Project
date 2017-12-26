@@ -1,0 +1,50 @@
+* CONCORDIA SLIDES
+           org         $000000
+
+          dc          11,10,-24,10,12,24
+x           dc          -1
+           ds          1
+	   ds          1
+           dc          4
+
+	 org		$300
+main       move        x(a0),a0       ; this is a comment
+           move        (a0),a1
+           move        1(a0),a1
+	move        -2(a0),a1
+           move        x(a0),d0       ; this is a comment
+           move        (a0),d1
+           move        1(a0),d1
+	move        -2(a0),d1
+           move        d1,x(a0)       ; this is a comment
+           move        d1,(a0)
+           move        d1,1(a0)
+	move        d1,-2(a0)
+           move        a1,x(a0)       ; this is a comment
+           move        a1,(a0)
+           move        a1,1(a0)
+	move        a1,-2(a0)
+           move	(a0),(a0)
+           move	1(a0),(a0)
+           move	(a0),1(a0)
+           move	1(a0),-1(a0)
+           move	-1(a0),1(a0)
+           move	1(a0),1(a0)
+           move	-1(a0),-1(a0)
+           move        d0,d1       ; who cares?
+           move        a1,d1
+           move        d1,a0
+           move        a0,a1
+           
+           sub         d1,d1
+	add         d1,d0
+	bra	main
+	beq 	main
+           blt         main
+           bgt         main
+	mulu        d1,d2
+           divu        d1,d2
+           cmp         d1,d2
+ 	swap        d1
+	stop #$2700
+	end

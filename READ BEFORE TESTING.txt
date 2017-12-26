@@ -1,0 +1,16 @@
+My project is an assembler that is supposed to mimic 68000 IDE as closely as possible.
+Operators that have been coded for include DIVU, MULU, ADD, SUB, BRA, BEQ, BLT, BGT, MOVE, CMP, SWAP, STOP
+Directives that have been coded for include END, ORG, DC, DS
+There are 3 addressing modes: Address register, Data register and Memory
+The STOP Instruction has been hardcoded for the #$2700, it should not affect performance
+
+My Test Files:
+Testfile: Data after instructions and simple instructions
+Testfile 6: Data before instruction and every possible
+	     combination of instructions
+Testfile 7: Same as 6 but seperated the locations of Data and
+            instructions
+
+Instructions:
+      Run file and name the file who would like to open. Output will 
+	be printed as well as saved as a Hex file
